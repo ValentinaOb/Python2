@@ -156,17 +156,30 @@ def ex2 ():
     for ele in wo1:
         r1 += ele
 
-    print ("R: ", r1)        
-    
+    print ("R: ", r1)            
 
 def ex3 ():
 
-    print ("A (a!=0): ")
-    a = int(input())
-    while(a==0):
-        a = int(input())
+    print ("S: ")
+    s = str(input())
     
+    s1=rev(s)
+    status=comparison(s,s1)
+    if(status==True): print ("Yes")
+    else: print ("No")
+    
+    
+    
+def comparison(s,s1):
+        if (s1==s):
+            return True
+        else: return False
 
+def rev(s):
+    if len(s) == 0:
+        return s
+    else:
+        return rev(s[1:]) + s[0]
 
 
 print ("N: ")
