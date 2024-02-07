@@ -65,7 +65,7 @@ def ex ():
 
     print ("\nResult: ", s)
     print ("S3: ", s3)
-    print ("K: ", k)
+    print ("K: ", (k-1))
 
 def ex1 ():
     
@@ -87,7 +87,7 @@ def ex1 ():
     r=1000
     
     while(k<100):
-        a=(2/7)*a+(x/(3*a**5))
+        a=(2/7)*a+(x/(3*(a**5)))
         r=a-an
         an=a
         k+=1
@@ -96,8 +96,8 @@ def ex1 ():
             
         
 
-    print ("\nA1: ", a0)
-    print ("R: ", r)
+    print ("\nA0: ", a0)
+    print ("A1: ", r)
     print ("K: ", k)
 
 def ex2 ():
