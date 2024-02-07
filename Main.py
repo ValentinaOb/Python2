@@ -112,7 +112,7 @@ def ex2 ():
     print ("W: ", words)
 
     wo = re.split("[,.!?@#$%^*&()_+/-]", S1)
-    print ("Wo: ", wo)
+   # print ("Wo: ", wo)
     
     
     for i in wo[:]:
@@ -120,7 +120,7 @@ def ex2 ():
            # print ("W: ", wo)  
             wo.remove(i)
     
-    print ("Wo: ", wo)
+   # print ("Wo: ", wo)
     
     r = ""
 
@@ -141,7 +141,7 @@ def ex2 ():
     print ("W: ", words1)
 
     wo1 = re.split("[,.!?@#$%^*&()_+/-]", s1)
-    print ("Wo: ", wo1)
+   # print ("Wo: ", wo1)
     
     
     for i in wo1[:]:
@@ -149,7 +149,7 @@ def ex2 ():
            # print ("W: ", wo)  
             wo1.remove(i)
     
-    print ("Wo: ", wo1)
+   # print ("Wo: ", wo1)
     
     r1 = ""
 
