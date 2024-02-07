@@ -166,9 +166,7 @@ def ex3 ():
     s1=rev(s)
     status=comparison(s,s1)
     if(status==True): print ("Yes")
-    else: print ("No")
-    
-    
+    else: print ("No") 
     
 def comparison(s,s1):
         if (s1==s):
