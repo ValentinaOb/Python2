@@ -44,8 +44,23 @@ def ex ():
 '''
 
     s3=1000
-
+    n=0
     while(s3>e):
+        for k in range (50):
+            l = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
+            s+=l
+            n+=1
+
+        for k in range (100):
+            l1 = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
+            s1+=l1
+
+        s3=abs(s-s1)   
+        print ("S: ",s)
+        print ("S1: ",s1)
+        
+    '''
+     while(s3>e):
 
      if(((a**5)+math.factorial(k))==0):
         print("Error") 
@@ -60,12 +75,13 @@ def ex ():
             
         
      s3=abs(s-s1)
-
+    '''
     
 
     print ("\nResult: ", s)
     print ("S3: ", s3)
-    print ("K: ", (k-1))
+    print ("N: ", n)
+    #print ("K: ", (k-1))
 
 def ex1 ():
     
