@@ -56,8 +56,8 @@ def ex ():
             s1+=l1
 
         s3=abs(s-s1)   
-        print ("S: ",s)
-        print ("S1: ",s1)
+      #  print ("S: ",s)
+      #  print ("S1: ",s1)
         
     '''
      while(s3>e):
