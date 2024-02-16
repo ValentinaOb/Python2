@@ -1,87 +1,48 @@
 import math
 import re
 
+def suma(x,a,epsi):
+    sum_v=0.0
+    k=0
+    term =1.0
+
+    while abs(term)>=epsi:
+        term = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
+        sum_v+=term
+        k+=1
+        
+    return sum_v,k
+
+
 def ex ():
 
-    print ("A (a!=0): ")
-    a = int(input())
-    while(a==0):
-        a = int(input())
+    a = float(input("A (a!=0): "))
+    while(a==0): a = float(input())
+        
     
-    print ("X (x!=0): ")
-    x = int(input())
-    while(x==0):
-        x = int(input())
+    x = float(input("X (x!=0): "))
+    while(x==0): x = float(input())
 
-    print ("E (e>0): ")
-    e = int(input())
-    while(e<0):
-        e = int(input())
+    e = float(input("E (e>0): "))
+    while(e<0): e = float(input())
         
-
-    k=1
-    s=0
-    s1=0
     
-    '''
-    while(k>0):
+    sum,k=suma(x,a,e)
+    print ("\nResult: ", sum)
+    print ("K: ", k)
+'''        
+    k=0
+    sum=0.0
+    f=1.0
 
-        l = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-        s+=l
-        k+=1
-        if(k==100): 
-            k=0
-            break
+    while abs(f)>=e :
+        f = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
+        sum+=f
+        k+=1 
+ '''
 
-    while(k>0):
-
-        l = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-        s1+=l
-        k+=1
-        if(k==200): 
-            k=0
-            break
-'''
-
-    s3=1000
-    n=0
-    while(s3>e):
-        for k in range (50):
-            l = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-            s+=l
-            n+=1
-
-        for k in range (100):
-            l1 = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-            s1+=l1
-
-        s3=abs(s-s1)   
-      #  print ("S: ",s)
-      #  print ("S1: ",s1)
-        
-    '''
-     while(s3>e):
-
-     if(((a**5)+math.factorial(k))==0):
-        print("Error") 
-        break
-     l = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-     s+=l
-
-     l1 = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-     k+=1
-     l2 = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
-     s1+=l1+l2
-            
-        
-     s3=abs(s-s1)
-    '''
     
 
-    print ("\nResult: ", s)
-    print ("S3: ", s3)
-    print ("N: ", n)
-    #print ("K: ", (k-1))
 
 def ex1 ():
     
