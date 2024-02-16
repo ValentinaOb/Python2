@@ -1,5 +1,4 @@
 import math
-import re
 
 def suma(x,a,epsi):
     sum_v=0.0
@@ -12,7 +11,6 @@ def suma(x,a,epsi):
         k+=1
         
     return sum_v,k
-
 
 def ex ():
 
@@ -40,9 +38,6 @@ def ex ():
         sum+=f
         k+=1 
  '''
-
-    
-
 
 def ex1 ():
     
@@ -79,62 +74,70 @@ def ex1 ():
 
 def ex2 ():
     
-    S=" Hello, Bye"
-    print ("S: ", S)
-    S1=" Hello, Bye? How, Bye!!! Hello! Hello. Are! Bye? Hello, Bye. You?"
-    print ("S1: ", S1)
+    signs=[",",".","!","?"]
+    
+    str='Hello, Bye'
+    str1='Hello, Bye? How, Bye!!! Hello! Hello. Are! Bye? Hello, Bye. You?'
+    s=""
+    s1=""
 
-    words=" "
-    words = re.split("[,.!?@#$%^*&()_+/-]", S)
-    print ("W: ", words)
+    for i in str:
+        if i not in signs:
+            s += i
 
-    wo = re.split("[,.!?@#$%^*&()_+/-]", S1)
-   # print ("Wo: ", wo)
-    
-    
-    for i in wo[:]:
-        if (i in words):
-           # print ("W: ", wo)  
-            wo.remove(i)
-    
-   # print ("Wo: ", wo)
-    
-    r = ""
+    for i in str1:
+        if i not in signs:
+            s1 += i
 
-    for ele in wo:
-        r += ele
+    print ("S: ", s)
+    print ("S1: ", s1)
 
-    print ("R: ", r)        
-    
+    s2=s.split(' ')
+    s3=s1.split(' ')
+
+    for i in s3[:]:
+        if i in s2:
+            s3.remove(i)
+    r=""
+    for i in s3:
+        r+=(i)+" "
+
+    print ("Result: ", r)
+
     #
-
-    print ("Input s (del): ")
-    s = str(input())
+    
+    print ("\nInput s (del): ")
+    text = input()
     print ("Input s1: ")
-    s1 = str(input())
+    text1 = input()
 
-    words1=" "
-    words1 = re.split("[,.!?@#$%^*&()_+/-]", s)
-    print ("W: ", words1)
+    t=""
+    t1=""
+    
+    for i in text:
+        if i not in signs:
+            t += i
 
-    wo1 = re.split("[,.!?@#$%^*&()_+/-]", s1)
-   # print ("Wo: ", wo1)
+    for i in text1:
+        if i not in signs:
+            t1 += i
+
+    print ("T: ", t)
+    print ("T1: ", t1)
+
+    t2=t.split(' ')
+    t3=t1.split(' ')
+
+    for i in t3[:]:
+        if i in t2:
+            t3.remove(i)
+    r1=""
+    for i in t3:
+        r1+=(i)+" "
+
+    print ("Result: ", r1)           
     
     
-    for i in wo1[:]:
-        if (i in words1):
-           # print ("W: ", wo)  
-            wo1.remove(i)
-    
-   # print ("Wo: ", wo1)
-    
-    r1 = ""
-
-    for ele in wo1:
-        r1 += ele
-
-    print ("R: ", r1)            
-
 def ex3 ():
 
     print ("S: ")
