@@ -2,15 +2,23 @@ import math
 
 def suma(x,a,epsi):
     sum_v=0.0
+    sum_v1=0.0
     k=0
-    term =1.0
+    term =0
+    sum=0.0
+    s=1.0
 
-    while abs(term)>=epsi:
+    while s>=epsi:
         term = ((-1**k)*(x**(-3*k)))/((a**5)+math.factorial(k))
+        sum_v1+=term
+        if(k!=0):
+            sum = sum_v1-sum_v
+            s=abs(sum)
         sum_v+=term
         k+=1
         
-    return sum_v,k
+        
+    return sum,k
 
 def ex ():
 
